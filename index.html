@@ -10,7 +10,7 @@
 
 <body>
 
-    <button id="check">Check</button>
+    <h1 id="msg"></h1>
 
 
     <script>
@@ -19,13 +19,15 @@
             var status = window.navigator.onLine
 
             if (status == true) {
-                console.log("online aso");
+                document.getElementById("msg").innerHTML ="You are Online now!" ;
             } else {
-                console.log("online nai");
-            }
-        }
-        setInterval(CheckStatus, 1000)
+                document.getElementById("msg").innerHTML ="You are Offline now!" ;
 
+            }
+            
+        }
+        setInterval(CheckStatus, 100)
+        
     </script>
 </body>
 
